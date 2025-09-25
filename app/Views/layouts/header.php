@@ -1,125 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DIREC UTFPR</title>
-    <link rel="stylesheet" href="/public/css/style.css">
-    <script src="/public/js/main.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DIREC - UTFPR</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Estilos customizados -->
+  <link rel="stylesheet" href="public/css/style.css">
 </head>
 <body>
-<header>
-    <div class="container header-container">
-        <!-- Logo -->
-        <a href="/index.php" class="logo">
-            <img src="/public/images/logo.png" alt="DIREC UTFPR" style="height:50px;">
-        </a>
-
-        <!-- Navbar -->
-        <nav>
-            <ul class="nav-menu">
-                <li class="dropdown">
-                    <a href="#">Projetos ▼</a>
-                    <ul class="dropdown-content">
-                        <li><a href="/app/Views/projetos/tipos.php?tipo=extensao">Extensão</a></li>
-                        <li><a href="/app/Views/projetos/tipos.php?tipo=inovacao">Inovação</a></li>
-                        <li><a href="/app/Views/projetos/tipos.php?tipo=pesquisa">Pesquisa</a></li>
-                    </ul>
-                </li>
-                <li><a href="/app/Views/noticias/index.php">Notícias</a></li>
-                <li><a href="/app/Views/eventos/index.php">Eventos</a></li>
-                <li><a href="/app/Views/editais/index.php">Editais</a></li>
-            </ul>
-
-            <!-- Botão mobile -->
-            <button class="menu-toggle" onclick="toggleMenu('nav-mobile')">☰</button>
-        </nav>
-    </div>
-
-    <!-- Menu mobile -->
-    <div id="nav-mobile" class="mobile-menu" style="display:none;">
-        <ul>
-            <li><a href="#">Projetos ▼</a>
-                <ul>
-                    <li><a href="/app/Views/projetos/tipos.php?tipo=extensao">Extensão</a></li>
-                    <li><a href="/app/Views/projetos/tipos.php?tipo=inovacao">Inovação</a></li>
-                    <li><a href="/app/Views/projetos/tipos.php?tipo=pesquisa">Pesquisa</a></li>
-                </ul>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+      <div class="container">
+        <a class="navbar-brand fw-bold text-warning" href="index.php">DIREC UTFPR</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarProjetos" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Projetos
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="projetos.php?tipo=extensao">Extensão</a></li>
+                <li><a class="dropdown-item" href="projetos.php?tipo=inovacao">Inovação</a></li>
+                <li><a class="dropdown-item" href="projetos.php?tipo=pesquisa">Pesquisa</a></li>
+              </ul>
             </li>
-            <li><a href="/app/Views/noticias/index.php">Notícias</a></li>
-            <li><a href="/app/Views/eventos/index.php">Eventos</a></li>
-            <li><a href="/app/Views/editais/index.php">Editais</a></li>
-        </ul>
-    </div>
-</header>
-
-<style>
-/* Navbar desktop */
-.nav-menu {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-}
-
-.nav-menu li {
-    position: relative;
-}
-
-.nav-menu li a {
-    padding: 0.5rem 1rem;
-    display: block;
-    color: #000;
-}
-
-.nav-menu li a:hover {
-    background-color: #FAB307;
-    color: #fff;
-    border-radius: 4px;
-}
-
-/* Dropdown */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #F5F5F5;
-    min-width: 150px;
-    z-index: 100;
-    border-radius: 4px;
-}
-
-.dropdown-content li a {
-    padding: 0.5rem 1rem;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-/* Mobile */
-.menu-toggle {
-    display: none;
-    background-color: #FAC107;
-    border: none;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    border-radius: 4px;
-}
-
-.mobile-menu ul {
-    list-style: none;
-    padding: 0;
-}
-
-.mobile-menu ul li a {
-    display: block;
-    padding: 0.5rem 1rem;
-    border-bottom: 1px solid #FAD67A;
-}
-
-/* Responsividade */
-@media (max-width: 767px) {
-    .nav-menu { display: none; }
-    .menu-toggle { display: block; }
-}
-</style>
+            <li class="nav-item"><a class="nav-link" href="noticias.php">Notícias</a></li>
+            <li class="nav-item"><a class="nav-link" href="eventos.php">Eventos</a></li>
+            <li class="nav-item"><a class="nav-link" href="editais.php">Editais</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
