@@ -1,4 +1,4 @@
-<?php include '../app/Views/layouts/header.php'; ?>
+<?php include('../layouts/header.php'); ?>
 
 <main class="container py-5">
   <h1 class="text-center mb-4">Notícias</h1>
@@ -29,4 +29,4 @@
   </div>
 </main>
 
-<?php include '../app/Views/layouts/footer.php'; ?>
+<?php include('../layouts/footer.php'); ?>
