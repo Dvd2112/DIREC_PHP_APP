@@ -1,4 +1,7 @@
-<?php include('../layouts/header.php'); ?>
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/DIREC_PHP_APP/bootstrap.php';
+include LAYOUT_PATH . 'header.php';
+?>
 
 <main class="container py-5">
   <h1 class="text-center mb-4">Notícias</h1>
@@ -29,4 +32,4 @@
   </div>
 </main>
 
-<?php include('../layouts/footer.php'); ?>
+<?php include LAYOUT_PATH . 'footer.php'; ?>

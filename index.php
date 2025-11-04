@@ -1,4 +1,8 @@
-<?php include 'app/Views/layouts/header.php'; ?>
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/DIREC_PHP_APP/bootstrap.php';
+include LAYOUT_PATH . 'header.php';
+?>
+
 
 <main class="container mt-5">
     <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -87,4 +91,4 @@
   </section>
 </main>
 
-<?php include 'app/Views/layouts/footer.php'; ?>
+<?php include LAYOUT_PATH . 'footer.php'; ?>
